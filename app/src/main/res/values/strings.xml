@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ArchitectureComponentsExamples</string>
-    <string name="view_binding_example">View Binding Example</string>
+    <string name="view_binding_example_activity">View Binding Example Activity</string>
+    <string name="view_binding_example_fragment">View Binding Example Fragment</string>
 </resources>

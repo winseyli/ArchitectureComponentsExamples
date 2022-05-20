@@ -11,14 +11,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val viewBindingExampleButton = findViewById<Button>(R.id.button_view_binding_example)
-        viewBindingExampleButton.setOnClickListener {
-            openViewBindingExample()
-        }
+        findViewById<Button>(R.id.button_view_binding_example_activity)
+            .setOnClickListener {
+                openViewBindingExampleActivity()
+            }
+
+        findViewById<Button>(R.id.button_view_binding_example_fragment)
+            .setOnClickListener {
+                openViewBindingExampleFragment()
+            }
     }
 
-    private fun openViewBindingExample() {
+    private fun openViewBindingExampleActivity() {
         val intent = Intent(this, ViewBindingExampleActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openViewBindingExampleFragment() {
+        val intent = Intent(this, FragmentContainerActivity::class.java).apply {
+            putExtra(Intent.EXTRA_INDEX, R.layout.fragment_view_binding_example)
+        }
         startActivity(intent)
     }
 }
