@@ -2,4 +2,6 @@
     <string name="app_name">ArchitectureComponentsExamples</string>
     <string name="view_binding_example_activity">View Binding Example Activity</string>
     <string name="view_binding_example_fragment">View Binding Example Fragment</string>
+    <string name="data_binding_example_activity">Data Binding Example Activity</string>
+    <string name="my_name_is_format">My name is %s %s.</string>
 </resources>

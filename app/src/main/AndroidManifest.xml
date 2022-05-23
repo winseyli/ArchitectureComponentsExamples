@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ArchitectureComponentsExamples">
         <activity
+            android:name=".databinding.DataBindingExampleActivity"
+            android:exported="false" />
+        <activity
             android:name=".FragmentContainerActivity"
             android:exported="false" />
         <activity

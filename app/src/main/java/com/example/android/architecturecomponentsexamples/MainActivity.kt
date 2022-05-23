@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.android.architecturecomponentsexamples.databinding.DataBindingExampleActivity
 import com.example.android.architecturecomponentsexamples.viewbinding.ViewBindingExampleActivity
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +21,11 @@ class MainActivity : AppCompatActivity() {
             .setOnClickListener {
                 openViewBindingExampleFragment()
             }
+
+        findViewById<Button>(R.id.button_data_binding_example_activity)
+            .setOnClickListener {
+                openDataBindingExampleActivity()
+            }
     }
 
     private fun openViewBindingExampleActivity() {
@@ -31,6 +37,11 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, FragmentContainerActivity::class.java).apply {
             putExtra(Intent.EXTRA_INDEX, R.layout.fragment_view_binding_example)
         }
+        startActivity(intent)
+    }
+
+    private fun openDataBindingExampleActivity() {
+        val intent = Intent(this, DataBindingExampleActivity::class.java)
         startActivity(intent)
     }
 }
